@@ -1,0 +1,41 @@
+--- FILE: style.css ---
+/* 共通スタイル (save as style.css) */
+body { margin:0; font-family: "Helvetica Neue", sans-serif; color:#333; background: linear-gradient(#eef3f6,#dbeaf2); }
+header { text-align:center; padding:80px 20px; color:white; background: linear-gradient(rgba(0,140,200,0.5), rgba(0,80,140,0.5)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; }
+header h1{ margin:0; font-size:44px; text-shadow:0 2px 6px rgba(0,0,0,0.5); }
+header p{ margin:8px 0 0 0; }
+header nav{ margin-top:15px; display:flex; justify-content:center; gap:28px; flex-wrap:wrap; }
+header nav a{ color:white; text-decoration:none; font-weight:600; }
+
+
+.section{ max-width:1000px; margin:60px auto; padding:0 20px; opacity:0; transform:translateY(30px); transition:opacity 0.9s ease, transform 0.9s ease; }
+.section.visible{ opacity:1; transform:translateY(0); }
+.section h2{ font-size:26px; color:#0078a8; border-left:6px solid #4eb5ff; padding-left:12px; margin-bottom:18px; }
+.box{ background:#fff; padding:22px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.08); margin-bottom:18px; }
+.btn{ display:inline-block; margin-top:12px; padding:10px 14px; background:#0080b5; color:#fff; text-decoration:none; border-radius:8px; }
+
+
+/* carousel */
+.carousel{ position:relative; overflow:hidden; border-radius:12px; }
+.carousel-track{ display:flex; transition:transform 0.5s ease; }
+.carousel-item{ min-width:100%; padding:20px; box-sizing:border-box; background:#fff; }
+.carousel-buttons{ position:absolute; top:50%; left:0; right:0; display:flex; justify-content:space-between; transform:translateY(-50%); }
+.carousel-buttons button{ background:rgba(0,128,181,0.8); color:#fff; border:none; padding:10px; border-radius:50%; cursor:pointer; }
+
+
+/* modal */
+.modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
+.modal-content{ background:#fff; padding:24px; border-radius:12px; max-width:680px; width:92%; box-shadow:0 12px 40px rgba(0,0,0,0.35); position:relative; }
+.modal-close{ position:absolute; top:12px; right:12px; font-size:20px; cursor:pointer; }
+
+
+form input, form textarea{ width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; box-sizing:border-box; }
+button.submit{ background:#0080b5; color:#fff; border:none; padding:12px 16px; border-radius:8px; cursor:pointer; }
+
+
+footer{ text-align:center; padding:26px; background:#0078a8; color:#fff; margin-top:40px; }
+
+
+@media(max-width:768px){ header h1{ font-size:34px; } .section{ margin:40px auto; } header nav{ gap:12px; } }
+@media(max-width:480px){ header h1{ font-size:28px; } }
+
