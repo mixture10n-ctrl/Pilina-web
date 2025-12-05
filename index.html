@@ -6,16 +6,16 @@
 <title>合同会社 Pilina - ワンページサイト</title>
 <style>
 body{margin:0;font-family:sans-serif;background:#f0f8ff;}header{display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 20px;background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;color:white;text-shadow:0 2px 4px rgba(0,0,0,0.5);}nav a{margin:0 5px;color:white;text-decoration:none;font-weight:bold;display:inline-block;}section{padding:60px 20px;}h2{text-align:center;margin-bottom:20px;} .box{background:white;padding:20px;margin:20px auto;border-radius:10px;max-width:700px;box-shadow:0 4px 10px rgba(0,0,0,0.1);} .carousel{position:relative;overflow:hidden;max-width:800px;margin:0 auto;} .carousel-track{display:flex;transition:0.4s;} .carousel-item{min-width:100%;background:white;margin:0 10px;border-radius:10px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,0.1);} .carousel-buttons button{border:none;background:#0077cc;color:white;padding:10px 20px;margin:10px;border-radius:5px;cursor:pointer;} footer{text-align:center;padding:20px;background:#004477;color:white;} .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);} .modal-content{background:white;padding:20px;border-radius:10px;max-width:500px;margin:100px auto;position:relative;} .modal-close{position:absolute;right:15px;top:10px;cursor:pointer;font-size:20px;}
-@media(max-width:600px){ nav{display:none;} .hamburger{display:block;} .nav-menu{display:none;flex-direction:column;gap:12px;margin-top:15px;} .nav-menu.active{display:flex;} } nav a{font-size:14px;padding:6px 8px;} }
-.hamburger{font-size:28px;cursor:pointer;margin-top:10px;} .nav-menu{display:flex;flex-direction:row;gap:20px;margin-top:15px;} .nav-menu a{font-size:18px;} .nav-menu.active{display:flex;} 
+@media(max-width:600px){ nav{display:none;}  nav{display:none;flex-direction:column;gap:12px;margin-top:15px;} .nav-menu.active{display:flex;} } nav a{font-size:14px;padding:6px 8px;} }
+ .nav-menu{display:flex;flex-direction:row;gap:20px;margin-top:15px;} .nav-menu a{font-size:18px;} .nav-menu.active{display:flex;} 
 </style>
 </head>
 <body>
 <header>
   <h1>合同会社 Pilina</h1>
   <p>コーチング・コンサルティング・物販事業</p>
-  <div class="hamburger">☰</div>
-  <nav class="nav-menu">
+  
+  <nav class="nav">
     <a href="#about">会社概要</a>
     <a href="#service">サービス</a>
     <a href="#works">実績</a>
@@ -111,6 +111,6 @@ body{margin:0;font-family:sans-serif;background:#f0f8ff;}header{display:flex;fle
 <div id="w2" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>企業コンサル詳細</h3><p>改善施策・効果。</p></div></div>
 <div id="w3" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>物販運営詳細</h3><p>実績・成果。</p></div></div>
 
-<script>const ham=document.querySelector('.hamburger');const menu=document.querySelector('.nav-menu');ham.addEventListener('click',()=>menu.classList.toggle('active'));</script>
+
 </body>
 </html>
