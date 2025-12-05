@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同会社 Pilina - ワンページサイト</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>合同会社 Pilina</h1>
+  <p>コーチング・コンサルティング・物販事業</p>
+  <nav>
+    <a href="#about">会社概要</a>
+    <a href="#service">サービス</a>
+    <a href="#works">実績</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<main>
+  <!-- 会社概要 -->
+  <section class="section" id="about">
+    <h2>会社概要</h2>
+    <div class="box">
+      <p><strong>会社名：</strong>合同会社 Pilina</p>
+      <p><strong>事業内容：</strong>コーチング・コンサル・物販</p>
+      <p><strong>理念：</strong>人をつなぎ、可能性をひらく。</p>
+    </div>
+  </section>
+
+  <!-- サービス -->
+  <section class="section" id="service">
+    <h2>サービス</h2>
+
+    <div class="box">
+      <h3>コーチング事業</h3>
+      <p>目標設定／行動プランの伴走、個別セッション、成果追跡など。</p>
+      <button class="modal-open" data-modal="svc1">詳細</button>
+    </div>
+
+    <div class="box">
+      <h3>コンサル事業</h3>
+      <p>戦略設計、マーケ改善、組織改革など。</p>
+      <button class="modal-open" data-modal="svc2">詳細</button>
+    </div>
+
+    <div class="box">
+      <h3>物販事業</h3>
+      <p>国内外商品の販売、EC運営支援。</p>
+      <button class="modal-open" data-modal="svc3">詳細</button>
+    </div>
+  </section>
+
+  <!-- 実績 -->
+  <section class="section" id="works">
+    <h2>実績</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <h4>個人コーチング支援</h4>
+          <p>個人クライアント支援実績多数。</p>
+          <button class="modal-open" data-modal="w1">詳細</button>
+        </div>
+        <div class="carousel-item">
+          <h4>企業向けコンサル</h4>
+          <p>売上改善プロジェクト多数。</p>
+          <button class="modal-open" data-modal="w2">詳細</button>
+        </div>
+        <div class="carousel-item">
+          <h4>物販運営</h4>
+          <p>ECローンチ・改善の実績あり。</p>
+          <button class="modal-open" data-modal="w3">詳細</button>
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="section" id="contact">
+    <h2>お問い合わせ</h2>
+    <div class="box">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="お名前" required>
+        <input type="email" name="email" placeholder="メールアドレス" required>
+        <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+        <button type="submit" class="submit">送信</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2025 合同会社 Pilina</footer>
+
+<!-- モーダル（サービス） -->
+<div id="svc1" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>コーチング詳細</h3><p>プログラム例・料金など。</p></div></div>
+<div id="svc2" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>コンサル詳細</h3><p>施策・効果・プロジェクト例。</p></div></div>
+<div id="svc3" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>物販詳細</h3><p>商品例・運営フロー。</p></div></div>
+
+<!-- モーダル（実績） -->
+<div id="w1" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>個人コーチング詳細</h3><p>成果事例など。</p></div></div>
+<div id="w2" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>企業コンサル詳細</h3><p>改善施策・効果。</p></div></div>
+<div id="w3" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>物販運営詳細</h3><p>実績・成果。</p></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
