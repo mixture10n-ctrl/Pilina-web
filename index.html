@@ -42,129 +42,26 @@ header nav a {
   letter-spacing: 0.5px;
 }
 @media(max-width: 700px) {
-  header nav {
-    display: none;
+  header {
+    padding: 12px 12px;
   }
-}
-
-/* ------------------------------
-   ヒーローエリア（背景：ハワイの海）
------------------------------- */
-.hero {
-  height: 70vh;
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 70px;
-}
-.hero h1 {
-  color: white;
-  font-size: 40px;
-  font-weight: 900;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
-}
-.hero p {
-  color: white;
-  font-size: 18px;
-  margin-top: 10px;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
-}
-
-/* ------------------------------
-   セクション共通
------------------------------- */
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-h2 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  text-align: center;
-  letter-spacing: 1px;
-}
-.box {
-  background: white;
-  padding: 28px;
-  margin-bottom: 26px;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-}
-
-/* ------------------------------
-   実績スライダー（シンプル横スクロール）
------------------------------- */
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding-bottom: 10px;
-}
-.slider::-webkit-scrollbar {
-  display: none;
-}
-.slide-item {
-  min-width: 280px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  scroll-snap-align: start;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-}
-
-/* ------------------------------
-   問い合わせフォーム
------------------------------- */
-form input, form textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-form button {
-  background: #111;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-form button:hover {
-  opacity: 0.8;
-}
-
-/* ------------------------------
-   フッター
------------------------------- */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #111;
-  color: white;
-  margin-top: 60px;
-}
-/* ------------------------------
-   ハンバーガーメニュー
------------------------------- */
-.hamburger {
+  .hamburger {
+    display: flex;
+    right: 12px !important;
+    top: 16px !important;
+  }
+} {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 6px;
   position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 12px;
+  top: 18px;
+  transform: none;
+  padding: 6px;
+  background: white;
+  border-radius: 6px;
 }
 .hamburger span {
   width: 26px;
