@@ -161,6 +161,10 @@ footer {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .hamburger span {
   width: 26px;
@@ -170,7 +174,14 @@ footer {
   border-radius: 3px;
 }
 @media(max-width: 700px) {
+  header {
+    padding: 12px 16px;
+  }
   .hamburger {
+    display: flex;
+    right: 16px;
+  }
+} {
     display: flex;
   }
 }
