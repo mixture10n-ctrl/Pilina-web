@@ -153,6 +153,54 @@ footer {
   color: white;
   margin-top: 60px;
 }
+/* ------------------------------
+   ハンバーガーメニュー
+------------------------------ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #222;
+  display: block;
+  border-radius: 3px;
+}
+@media(max-width: 700px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ------------------------------
+   スマホメニュー（スライド）
+------------------------------ */
+.mobile-menu {
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 70%;
+  background: white;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+.mobile-menu a {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+.mobile-menu.open {
+  right: 0;
+}
 </style>
 </head>
 <body>
@@ -165,7 +213,18 @@ footer {
     <a href="#works">実績</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </header>
+
+<!-- スマホメニュー -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">会社概要</a>
+  <a href="#service" onclick="toggleMenu()">サービス</a>
+  <a href="#works" onclick="toggleMenu()">実績</a>
+  <a href="#contact" onclick="toggleMenu()">お問い合わせ</a>
+</div>
 
 <!-- ヒーローエリア -->
 <div class="hero">
@@ -242,5 +301,10 @@ footer {
   © 2025 合同会社 Pilina
 </footer>
 
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+</script>
 </body>
 </html>
