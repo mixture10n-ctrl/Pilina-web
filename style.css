@@ -1,0 +1,139 @@
+/* 全体リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #222;
+  background: #f7f7f7;
+}
+
+/* ---------------------
+   ヘッダー
+--------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  background: #ffffffd8;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.header-inner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ---------------------
+   ハンバーガー
+--------------------- */
+.hamburger {
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: #222;
+  margin: 4px 0;
+  transition: 0.3s ease;
+}
+
+/* 開いた時のアニメーション */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ---------------------
+   モバイルメニュー
+--------------------- */
+.mobile-nav {
+  position: absolute;
+  top: 56px;
+  width: 100%;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+  animation: fadeSlide 0.25s ease forwards;
+}
+
+.mobile-nav a {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+}
+
+/* ふわっと下に表示 */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------
+   コンテンツ側余白
+--------------------- */
+.content {
+  padding-top: 56px;
+}
+
+/* ---------------------
+   トップセクション
+--------------------- */
+.hero {
+  padding: 120px 16px 80px;
+  text-align: center;
+  background: url('hawaii.jpg') center/cover no-repeat;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+  margin-bottom: 40px;
+}
+
+.section {
+  padding: 60px 16px;
+  background: #fff;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
