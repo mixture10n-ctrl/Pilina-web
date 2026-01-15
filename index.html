@@ -1,58 +1,164 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stylish Consulting Site</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同会社 Pilina - United Athle風デザイン</title>
+<style>
+/* ------------------------------
+   ハンバーガーメニュー & スマホメニュー調整
+------------------------------ */
+.hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger span:nth-child(1) { transform: translateY(-7px); }
+.hamburger span:nth-child(3) { transform: translateY(7px); }
+
+.mobile-menu.open + header .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.mobile-menu.open + header .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu.open + header .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media (max-width:700px) {
+  nav { display:none; }
+  .hamburger { display:flex; }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 75%;
+  height: calc(100vh - 60px);
+  background: #fff;
+  box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+  padding: 24px;
+  transition: right 0.3s ease;
+  z-index: 998;
+}
+.mobile-menu.open { right: 0; }
+</style>
 </head>
 <body>
 
-<header class="header">
-  <div class="header-inner">
-    <div class="logo">K-Consulting</div>
-
-    <button class="hamburger" id="hamburgerBtn">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-
-  <nav class="mobile-nav" id="mobileNav">
+<header>
+  <div class="logo">合同会社 Pilina</div>
+  <nav>
+    <a href="#about">会社概要</a>
     <a href="#service">サービス</a>
     <a href="#works">実績</a>
-    <a href="#about">会社概要</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="menu">
+    <span></span><span></span><span></span>
+  </div>
 </header>
 
-<main class="content">
-  <section class="hero">
-    <h1>次世代型コンサルティング</h1>
-    <p>戦略 × クリエイティブ × テクノロジーで成長をデザインする</p>
-  </section>
+<!-- スマホメニュー -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">会社概要</a>
+  <a href="#service" onclick="toggleMenu()">サービス</a>
+  <a href="#works" onclick="toggleMenu()">実績</a>
+  <a href="#contact" onclick="toggleMenu()">お問い合わせ</a>
+</div>
 
-  <section id="service" class="section">
-    <h2>サービス</h2>
-    <p>ブランド設計 / Web制作 / 経営戦略 / プロモーション設計 など</p>
-  </section>
+<!-- ヒーローエリア -->
+<div class="hero">
+  <div>
+    <h1>Pilina – 人をつなぎ、可能性をひらく</h1>
+    <p>コーチング / コンサルティング / 物販事業</p>
+  </div>
+</div>
 
-  <section id="works" class="section">
-    <h2>実績</h2>
-    <p>制作例や支援内容を掲載予定</p>
-  </section>
-
-  <section id="about" class="section">
+<main>
+  <!-- 会社概要 -->
+  <section id="about">
     <h2>会社概要</h2>
-    <p>シンプル＆スタイリッシュな会社紹介</p>
+    <div class="box">
+      <p><strong>会社名：</strong>合同会社 Pilina</p>
+      <p><strong>事業内容：</strong>コーチング・コンサル・物販</p>
+      <p><strong>理念：</strong>人と価値をつなぐ“Pilina” を創り出す。</p>
+    </div>
   </section>
 
-  <section id="contact" class="section">
+  <!-- サービス -->
+  <section id="service">
+    <h2>サービス</h2>
+    <div class="box">
+      <h3>コーチング事業</h3>
+      <p>行動デザインを軸に、目標達成の伴走支援を行います。</p>
+    </div>
+    
+    <div class="box">
+      <h3>コンサルティング事業</h3>
+      <p>事業課題の発見から改善まで一気通貫でサポート。</p>
+    </div>
+
+    <div class="box">
+      <h3>物販事業</h3>
+      <p>国内外商品の仕入れ・販売およびEC改善支援。</p>
+    </div>
+  </section>
+
+  <!-- 実績（スライド形式） -->
+  <section id="works">
+    <h2>実績</h2>
+    <div class="slider">
+      <div class="slide-item">
+        <h4>個人向けコーチング支援</h4>
+        <p>行動習慣化プログラムを中心に、多数の成果実績。</p>
+      </div>
+      <div class="slide-item">
+        <h4>企業向けコンサル</h4>
+        <p>売上改善・組織改善プロジェクトの実績多数。</p>
+      </div>
+      <div class="slide-item">
+        <h4>EC運営・物販支援</h4>
+        <p>EC構築から販売戦略、改善運用まで対応。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact">
     <h2>お問い合わせ</h2>
-    <p>お気軽にご相談ください</p>
+    <div class="box">
+      <form>
+        <input type="text" placeholder="お名前" required>
+        <input type="email" placeholder="メールアドレス" required>
+        <textarea rows="5" placeholder="お問い合わせ内容" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+    </div>
   </section>
 </main>
 
-<script src="script.js"></script>
+<footer>
+  © 2025 合同会社 Pilina
+</footer>
 
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+</script>
 </body>
 </html>
